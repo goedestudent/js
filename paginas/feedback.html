@@ -1,0 +1,59 @@
+<h1 id="pagina-titel">Vul hieronder je feedback in</h1>
+<div id="feedback-type-selectie-met-label">
+    <label for="feedback-type-selectie">Selecteer het type feedback:</label>
+    <select id="feedback-type-selectie">
+        <option value="feedback">Algemeen</option>
+        <option value="bug">Bug</option>
+        <option value="suggestie">Suggestie</option>
+    </select>
+</div>
+<form id="feedback-formulier" autocomplete="off">
+    <div class="invoer-met-label">
+        <label for="feedback-titel">Feedback titel</label>
+        <input id="feedback-titel" placeholder="Goede site, 5 sterren" required />
+    </div>
+    <div class="invoer-met-label">
+        <label for="feedback-tekst">Feedback</label>
+        <textarea id="feedback-tekst" placeholder="Ik vind de site ... Ik mis alleen nog ..." required></textarea>
+    </div>
+    
+    <button id="verstuur-knop">verstuur</button>
+</form>
+
+<form id="bug-formulier" autocomplete="off">
+    <div class="invoer-met-label">
+        <label for="bug-titel">Omschrijf het probleem in een paar woorden</label>
+        <input id="bug-titel" placeholder="Recept opent niet" required />
+    </div>
+    <div class="invoer-met-label">
+        <label for="bug-actie">Wat probeerde je te doen?</label>
+        <textarea id="bug-actie" placeholder="Ik probeerde het recept voor pizza shoarma te openen" required></textarea>
+    </div>
+    <div class="invoer-met-label">
+        <label for="bug-gebeurd">Wat gebeurde er toen?</label>
+        <textarea id="bug-gebeurd" placeholder="Er stond 'geen recepten gevonden', en er kwam een gekke pop-up" required></textarea>
+    </div>
+    <div class="invoer-met-label">
+        <label for="bug-verwacht">Wat verwachtte je dat er zou gebeuren?</label>
+        <textarea id="bug-verwacht" placeholder="Dat ik de lijst met recepten te zien kreeg" required></textarea>
+    </div>
+    <div class="invoer-met-label">
+        <label for="bug-pagina">Op welke pagina gebeurde dat?</label>
+        <input id="bug-pagina" placeholder="homepagina" />
+    </div>
+    
+    <button id="bug-verstuur-knop">verstuur</button>
+</form>
+
+<form id="suggestie-formulier" autocomplete="off">
+    <div class="invoer-met-label">
+        <label for="suggestie-titel">Omschrijf de suggestie in een paar woorden</label>
+        <input id="suggestie-titel" placeholder="Automatisch recepten maken" required />
+    </div>
+    <div class="invoer-met-label">
+        <label for="suggestie-tekst">Beschrijf de suggestie in iets meer detail</label>
+        <textarea id="suggestie-tekst" placeholder="Op de accountpagina zou een nieuwe knop moeten komen met 'nieuw recept', die dan uit zichzelf een recept samenstelt. Hij stuurt je dan naar de receptenpagina waarop het nieuwe recept te zien is." required></textarea>
+    </div>
+    
+    <button id="suggestie-verstuur-knop">verstuur</button>
+</form>

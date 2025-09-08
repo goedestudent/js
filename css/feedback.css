@@ -1,0 +1,9 @@
+@import url(/css/formulier.css);
+
+/* Maakt de type-selectie even groot als de formulieren */
+#feedback-type-selectie-met-label {
+    margin: auto;
+    max-width: 25em;
+    width: 100%;
+    margin-bottom: 2em;
+}

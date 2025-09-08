@@ -1,0 +1,124 @@
+.recept-gegevens {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    column-gap: 1em;
+
+    background-color: rgba(128, 0, 128, 0.1);
+    padding: .4em 0;
+}
+
+.recept-gegeven {
+    margin: 0 .5em;
+}
+
+.recept-kaarten-titel {
+    text-align: center;
+}
+
+.recept-kaarten {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 33%));
+}
+
+.recept-kaarten-uitbreidknop-container {
+    text-align: center;
+    width: 100%;
+}
+
+.recept-kaarten-uitbreidknop {
+    width: 1.75em; /* De knop net zo breed maken als hij hoog is */
+}
+
+/* Het pijltje in de uitbreidknop */
+.recept-kaarten-uitbreidknop-icoon {
+    border: solid white;
+    border-width: .25em .25em 0 0;
+    width: .5em;
+    height: .5em;
+    transform: rotate(135deg);
+    display: inline-block;
+}
+
+/* Op mobiele apparaten moeten de ingredienten en bereidingstappen onder elkaar komen, in plaats van naast elkaar. */
+@media screen and (max-width: 1023px) {
+    .recept-kaarten {
+        grid-template-columns: 100% !important;
+    }
+
+    .homepage-zoekbalk {
+        border-radius: 0 !important;
+        margin: 0 -8px;
+    }
+}
+
+.recept-kaart-houder {
+    padding: 0.5em;
+}
+
+.recept-kaart {
+    box-shadow: 0 .25em .5em rgba(0, 0, 0, 0.2);
+    border-radius: 1em;
+    display: grid;
+    grid-template-rows: 150px min-content min-content;
+    overflow: hidden;
+    height: 100%;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    text-decoration: none;
+
+    color: black;
+}
+
+.recept-kaart:hover {
+    box-shadow: 0 .25em .5em rgba(0, 0, 0, 0.6);
+}
+
+.recept-kaart--plaatje-houder {
+    width: 100%;
+    height: 0;
+}
+
+.recept-plaatje {
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+}
+
+.recept-naam {
+    padding: .4em 0 1em 1em;
+}
+
+.homepage-zoekbalk {
+    height: 50vh;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1em;
+}
+
+#zoekbalk-plaatje, .zoekbalk-plaatje-fade {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    position: absolute;
+}
+
+.zoekbalk-plaatje-fade {
+    z-index: 1;
+    background: linear-gradient(180deg,transparent,#000);
+}
+
+.zoekbalk-plaatje-houder {
+    position: relative;
+    height: 15vh;
+    z-index: -5;
+}
+
+#zoekbalk-recept-naam {
+    position: absolute;
+    bottom: 0.5em;
+    right: 0.5em;
+    color: white;
+}

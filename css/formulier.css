@@ -1,0 +1,60 @@
+/* 
+    Dit bestand bevat alle stijlen met betrekking tot formulieren.
+    Om deze stijlen te activeren op een pagina kan `@import url(/css/formulier.css)`
+    worden gebruikt.
+ */
+#pagina-titel, h2 {
+    text-align: center;
+    color: purple;
+    text-transform: uppercase;
+    font-family: Nunito,sans-serif;
+}
+
+input, button, textarea {
+    width: 100%;
+}
+
+input, select {
+    display: block;
+}
+
+select {
+    margin: auto;
+}
+
+form {
+    margin: auto;
+    max-width: 25em;
+    width: 100%;
+}
+
+button {
+    width: 100%;
+}
+
+label {
+    color: purple;
+}
+
+/* Als een label de klasse required krijgt, zetten we er een rood sterretje achter. */
+label[required]::after {
+    content: "*";
+    color: red;
+}
+
+label[required]:hover::after {
+    content: " (Dit veld is verplicht)";
+    font-size: 0.5em;
+}
+
+.invoer-met-label {
+    display: block;
+    margin-bottom: 1em;
+}
+
+/* Als een bestandsinvoer succesvol krijgt als klasse, zetten we er een groen vinkje achter. */
+input[type="file"].succesvol::after {
+    content: "  \2713";
+    color: green;
+    background-color: white;
+}

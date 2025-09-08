@@ -1,0 +1,29 @@
+@import url(/css/formulier.css);
+
+#recept-formulier {
+    margin: auto;
+    max-width: 25em;
+    width: 100%;
+}
+
+#recept-formulier-receptgegevens {
+    display: none;
+}
+
+#opslaan-knop {
+    width: 100%;
+}
+
+/* Dit zorgt ervoor dat de checkbox op dezelfde hoogte staat als het label ernaast */
+.recept-menu-gang-lijst-item {
+    display: flex;
+    align-items: center;
+}
+
+/* Dit zorgt ervoor dat de checkbox iets groter is, en dat er wat ruimte naast blijft rechts */
+input.recept-menu-gang {
+    margin: 0;
+    height: 1em;
+    width: 1em;
+    margin-right: 1em;
+}

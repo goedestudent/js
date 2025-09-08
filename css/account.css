@@ -1,0 +1,17 @@
+h1, h2 {
+    color: purple;
+    font-family: Nunito,sans-serif;
+}
+
+.account-knoppen {
+    display: grid;
+    width: 100%;
+    max-width: 25em;
+    grid-template-columns: 1fr;
+    margin: auto;
+    row-gap: .5em;
+}
+
+#uitlogknop {
+    margin-top: 1.5em;
+}

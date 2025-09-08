@@ -1,0 +1,163 @@
+/*
+    In dit CSS bestand komen de stijlen van elementen die op alle paginas (kunnen) voorkomen.
+    Denk aan de bovenbalk, met de sitenaam, en een zoekbalk.
+*/
+
+/* Basis-stijl van de website */
+:root {
+    /* Tekst groter maken */
+    font-size: 1.25em;
+
+    /* Het lettertype instellen*/
+    font-family: sans-serif;
+}
+
+main {
+    margin: 2em;
+}
+
+/* De bovenbalk van de site */
+header {
+    /* 10% van het scherm */
+    height: 10vh;
+
+    /* Streep eronder*/
+    border-bottom: 1px black solid;
+
+    /* Indeling van elementen in de bovenbalk */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Ruimte overlaten onder de balk, zodat de pagina er niet direct tegenaan staat */
+    margin-bottom: 1em;
+}
+
+/* De naam van de site in de header */
+.site-naam {
+    color: purple;
+    font-weight: bolder;
+    font-size: 1.5em;
+
+    /* De naam is een link. Om ervoor te zorgen dat er geen streep onder komt is dit nodig. */
+    text-decoration: none;
+
+    font-family: Nunito,sans-serif;
+}
+
+/* Het logo van de site in de header */
+.site-logo {
+    margin-right: 1em;
+    height: 80%;
+}
+
+#header-account {
+    font-size: 1.5em;
+    float: right;
+    position: absolute;
+    right: 2em;
+    text-decoration: none;
+}
+
+input, select {
+    font-size: 1.05rem;
+    border-radius: 2em;
+    height: 1.75em;
+    padding-left: .5em;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+textarea {
+    font-size: 1.05rem;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    text-align: left;
+}
+
+button {
+    border-radius: 2em;
+    height: 1.75em;
+    font-size: 1.05rem;
+    background-color: purple;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:not([disabled]):hover {
+    background-color: magenta;
+}
+
+button.niet-gevuld {
+    background-color: white;
+    color: purple;
+    border: 1px purple solid;
+    transition: color 0.3s, border 0.3s;
+}
+
+button.niet-gevuld:not([disabled]):hover {
+    color: magenta;
+    border: 1px magenta solid;
+}
+
+button[disabled] {
+    background-color: gray;
+    color: white;
+    cursor: not-allowed;
+    border: none;
+}
+
+.zoekbalk {
+    display: grid;
+    grid-template-columns: 1fr 3em;
+    height: 2em;
+    border-radius: 2em;
+    overflow: hidden;
+    max-width: 28em;
+    /* 1px boven en onder, zodat de rand altijd te zien is. Auto links en rechts, zodat de balk in het midden komt. */
+    margin: 1px auto;
+}
+
+.zoekbalk-invoer, .zoekbalk-knop {
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+    height: auto;
+}
+
+.zoekbalk-invoer {
+    padding-left: 1em;
+    border: 1px lightgrey solid;
+    border-radius: 2em 0 0 2em;
+    box-shadow: rgb(150, 150, 150) inset 2px 0 4px;
+}
+
+.zoekbalk-knop {
+    background-color: purple;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+a.normale-tekst {
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width: 1023px)
+{ 
+    main {
+        margin: 0;
+    }
+
+    #header-account-naam {
+        display: none;
+    }
+
+    #header-account {
+        right: 0;
+    }
+}

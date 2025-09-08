@@ -1,0 +1,63 @@
+<h1 id="pagina-titel">Recept toevoegen</h1>
+<form id="recept-formulier" autocomplete="off">
+    <div id="recept-formulier-receptgegevens">
+        <h2>Basis</h2>
+        <div class="invoer-met-label">
+            <label for="recept-naam">Naam van het recept</label>
+            <input id="recept-naam" placeholder="Pannenkoekiessss" required />
+        </div>
+
+        <div class="invoer-met-label">
+            <label for="recept-foto">Plaatje van het gerecht</label>
+            <input id="recept-foto" type="file" accept="image/*" />
+        </div>
+
+        <div class="invoer-met-label">
+            <label for="recept-omschrijving">Kort stukje</label>
+            <textarea id="recept-omschrijving" placeholder="Het lekkerst om samen te eten"></textarea>
+        </div>
+        <h2>Handige info</h2>
+        <div class="invoer-met-label">
+            <label for="recept-tijd">Bereidingstijd</label>
+            <input id="recept-tijd" placeholder="30 minuten"/>
+        </div>
+        <div class="invoer-met-label">
+            <label for="recept-porties">Aantal porties</label>
+            <input id="recept-porties" placeholder="2" step="0.1" type="number" value="2" />
+        </div>
+        <div class="invoer-met-label">
+            <label for="recept-eerst-gemaakt">Eerst gemaakt</label>
+            <input id="recept-eerst-gemaakt" placeholder="26-02-2022" />
+        </div>
+        <div class="invoer-met-label">
+            <label for="recept-menu-gang-lijst">Soort gerecht</label>
+            <ul id="recept-menu-gang-lijst">
+            </ul>
+        </div>
+
+        <h2>Ingredienten</h2>
+        <ul id="recept-ingredienten">
+        </ul>
+
+        <h2>Bereiding</h2>
+        <ul id="recept-bereiding">
+        </ul>
+
+        <h2>Extra suggesties/weetjes</h2>
+        <ul id="recept-suggesties">
+        </ul>
+    </div>
+
+    <h2>Review</h2>
+    <p>Nu je hier toch bent kan je meteen een review achter laten :p</p>
+    <div class="invoer-met-label">
+        <label for="recept-score">Score</label>
+        <input id="recept-score" placeholder="4.7" type="number" step="0.1" min="1" max="5" />
+    </div>
+    <div class="invoer-met-label">
+        <label for="recept-review">Review</label>
+        <textarea id="recept-review" placeholder="De combinatie van komkommer en pannenkoek geeft een ultieme smaakervaring"></textarea>
+    </div>
+
+    <button id="opslaan-knop">opslaan</button>
+</form>
